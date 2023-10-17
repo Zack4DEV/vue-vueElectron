@@ -10,20 +10,20 @@ export default defineConfig({
   build: {
     manifest: true,
     rollupOptions: {
-      input: path.resolve(__dirname, 'dir/render/main.ts')
+      external: path.resolve(__dirname, 'src/main.ts')
     },
   },
   resolve: {
     alias: {
-      '@app': path.join(__dirname, 'dir/render/app')
+      '@app': path.join(__dirname, '/app'),
     },
   },
   server: {
       server: '0.0.0.0',
       port: 65534,
       hmr: {
-      overlay: false,
-    },
+      overlay: false
+    }
   },
   plugins: [
     vue(),
@@ -32,9 +32,6 @@ export default defineConfig({
       // edit live reload paths according to your source code
       // for example:
       // using this for our example:
-      __dirname + 'dir/render/app/*.php',
-      __dirname + 'dir/render/app/**/*.php'
-
     ]),
   ],
 });
