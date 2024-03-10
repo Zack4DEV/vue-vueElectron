@@ -1,0 +1,4 @@
+modules = ["vue-node-20:v2-20240116-2181bf7"]
+
+[nix]
+channel = "stable-23_11"
