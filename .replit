@@ -1,4 +1,16 @@
-modules = ["vue-node-20:v2-20240116-2181bf7"]
+run = "npm run dev -v --host 0.0.0.0 --port 8000"
+modules = ["nodejs-20:v8-20230920-bd784b9", "vue-node-21:3.4.0-rc.3"]
 
 [nix]
 channel = "stable-23_11"
+
+[deployment]
+run = ["sh", "-c", "npm run dev -v"]
+deploymentTarget = "cloudrun"
+
+[[ports]]
+localPort = 8000
+externalPort = 80
+exposeLocalhost = true
+
+#run = "rm -rf .cache"

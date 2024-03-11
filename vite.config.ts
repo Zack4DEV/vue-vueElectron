@@ -15,12 +15,12 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      '@app': path.join(__dirname, '/app'),
+    '@e2e': path.join(__dirname, '/e2e'),
     },
   },
   server: {
       server: '0.0.0.0',
-      port: 65534,
+      port: 8000,
       hmr: {
       overlay: false
     }
