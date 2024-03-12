@@ -55,7 +55,7 @@
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "rimraf dist && vite build --watch --force",
+		"build": "vite build --watch --force && rimraf dist",
 		"preview": "rimraf dist && vite preview --watch",
 		"optimize": "vite optimize",
 		"lint": "eslint .",
