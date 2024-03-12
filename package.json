@@ -55,8 +55,8 @@
 	},
 	"scripts": {
 		"dev": "vite",
-		"build": "vite build --watch --force",
-		"preview": "rimraf dist && vite preview --watch",
+		"build": "vite build",
+		"preview": "rimraf dist && vite preview",
 		"optimize": "vite optimize",
 		"lint": "eslint .",
 		"lint:fix": "eslint . --fix --no-ignore"
