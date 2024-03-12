@@ -34,7 +34,7 @@ jobs:
           node-version: 21
 #          cache: 'npm config --package-lock'
       - name: Custom Install
-        run: npm run install
+        run: npm install vite glob -D
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build
