@@ -64,7 +64,6 @@ jobs:
       
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: peaceiris/actions-github-pages@v3.1.12
+        uses: actions/deploy-pages@v4.0.5
         with:
-            deploy_key: ${{ secrets.PAGES_DEPLOY_KEY }}
-            github_token: ${{ secrets.GITHUB_TOKEN }}
+            preview: true
